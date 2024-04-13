@@ -45,5 +45,19 @@ addLayer("F", {
             description: "Immensively boost tickspeed",
             cost: new Decimal(25),
         },
+        14: {
+            title: "Particle Accelerator II",
+            description: "Immensively boost tickspeed... again",
+            cost: new Decimal(100),
+        },
+        15: {
+            title: "Particle Accelerator III",
+            description: "THIS IS REPETITIVE",
+            cost: new Decimal(1000),
+            effect() {
+                return player[this.layer].points.add(1).times(888).pow(0.85)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x, also you get ^3 upon buying" }, // Add formatting to the effect
+        },
     },
 })
