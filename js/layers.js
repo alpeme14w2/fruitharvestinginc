@@ -25,13 +25,5 @@ addLayer("F", {
         {key: "f", description: "fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
-    upgrades: {
-        11: {
-            title: "Your first upgrade",
-            description: "x2 Resettime",
-            cost: new Decimal(3),
-            etc
-        },
-        etc
-    }
+    
 })
