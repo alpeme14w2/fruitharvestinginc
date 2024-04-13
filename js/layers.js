@@ -31,5 +31,14 @@ addLayer("F", {
             description: "Double tickspeed",
             cost: new Decimal(3),
         },
+        12: {
+            title: "TIMEWRAP!",
+            description: "Tickspeed boosts based on itself",
+            cost: new Decimal(7),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+        },
     },
 })
