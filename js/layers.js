@@ -33,10 +33,10 @@ addLayer("F", {
         },
         12: {
             title: "TIMEWRAP!",
-            description: "Tickspeed boosts based on itself",
+            description: "Tickspeed boosts based on your amount of fruits",
             cost: new Decimal(7),
             effect() {
-                return player[this.layer].points.add(1).pow(0.5)
+                return player[this.layer].points.add(1).pow(0.3)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
