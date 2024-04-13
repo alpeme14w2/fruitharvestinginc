@@ -24,5 +24,12 @@ addLayer("F", {
     hotkeys: [
         {key: "f", description: "f: fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        11: {
+            title: "Your first upgrade",
+            description: "Double tickspeed",
+            cost: new Decimal(3),
+        },
+    },
 })
