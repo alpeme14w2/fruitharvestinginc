@@ -25,15 +25,11 @@ addLayer("F", {
         {key: "f", description: "fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
-    buyables: {
+    upgrades: {
         11: {
-            cost(x) { return new Decimal(3).mul(x) },
-            display() { return "Blah" },
-            canAfford() { return player[this.layer].points.gte(this.cost()) },
-            buy() {
-                player[this.layer].points = player[this.layer].points.sub(this.cost())
-                setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
-            },
+            title: "Your first upgrade",
+            description: "x2 Resettime",
+            cost: new Decimal(3),
             etc
         },
         etc
