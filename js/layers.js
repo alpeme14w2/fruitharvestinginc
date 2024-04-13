@@ -40,5 +40,10 @@ addLayer("F", {
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
+        13: {
+            title: "Particle Accelerator",
+            description: "Immensively boost tickspeed",
+            cost: new Decimal(25),
+        },
     },
 })
