@@ -22,8 +22,7 @@ addLayer("F", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "f", description: "fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "f", description: "f: fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true},
-    
+    layerShown(){return true}
 })
